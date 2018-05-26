@@ -1,4 +1,5 @@
-*********************** Project Summary ************************
+*********************** Project Summary ************************ 
+
 This project is an application of machine learning on 2R robotic arm.
 It is modeled and simulated in Matlab to perform a task of drawing.
 
@@ -10,6 +11,7 @@ can be found on 'training scores.png'. And the final result of drawing can be
 seen on 'flower.png'.
 
 *********************** Construction of Neural Network **********************
+
 The structure of the neural network:
         n+1 ----> n/2+1 ----> n/2+1 ---- n
     where n is the number of sets of training data and add one training bias
@@ -22,6 +24,7 @@ Transfer function:
 Other parameters can be seem in the function neuralNetwork.m
 
 ************************** Files and Instructions ***************************
+
 The files include:
     functions:
 	createflower.m
@@ -50,6 +53,7 @@ The files include:
    robDraw3D.m also contrains PD control and dynamics parts
 
 =========== Instruction ============
+
 The weight and data has already be generated and saved as .mat file. If you do not 
 wish to do the training yourself, just go directly to step 2.
 
@@ -63,6 +67,7 @@ wish to do the training yourself, just go directly to step 2.
    that create other trajectories)
 
 ************* Supplemental Materials ****************
+
 This part of codes can be find in the folder 'supplemental function'. The codes inside are
 used for computing the derications of equations for kinematics. The function dynamicrob.m
 calls dynamics_lagrangian.m to compute the equations of robot dynamics using lagrangian
