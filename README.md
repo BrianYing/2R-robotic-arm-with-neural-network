@@ -1,32 +1,31 @@
 *********************** Project Summary ************************ 
 
-This project is an application of machine learning on 2R robotic arm.
-It is modeled and simulated in Matlab to perform a task of drawing.
+This project is an application of machine learning on 2R robotic arm. It is modeled and simulated in Matlab to perform a task of drawing.
 
-The general idea is to use a two layer perception neural network to solve for 
-the inverse kinematics problem for the joint angles, and then applied PD control
-for the robotic arm to draw the patterns we want. The workspace of the robotic
-arm can be found on 'workspace.png', and the training scores of the neural network
-can be found on 'training scores.png'. And the final result of drawing can be 
-seen on 'flower.png'.
+The general idea is to use a two layer perception neural network to solve for the inverse kinematics problem for the joint angles, and then applied PD control for the robotic arm to draw the patterns we want. The workspace of the robotic arm can be found on 'workspace.png', and the training scores of the neural network can be found on 'training scores.png'. And the final result of drawing can be seen on 'flower.png'.
 
 *********************** Construction of Neural Network **********************
 
-The structure of the neural network:
-        n+1 ----> n/2+1 ----> n/2+1 ---- n
-    where n is the number of sets of training data and add one training bias
-    n/2 is the number of neuron. In this project we use fewer neuron due to 
-    the computational ability of our laptop
+The structure of the neural network: 
+
+    n+1 ----> n/2+1 ----> n/2+1 ---- n
+    
+where n is the number of sets of training data and add one training bias n/2 is the number of neuron. In this project we use fewer neuron due to the computational ability of our laptop
+
 Learning rule:
-	backpropagation learning rule
+    backpropagation learning rule
+    
 Transfer function:
-	tanh
+    tanh
+    
 Other parameters can be seem in the function neuralNetwork.m
 
 ************************** Files and Instructions ***************************
 
 The files include:
-    functions:
+
+functions: 
+
 	createflower.m
 	datagenerator.m
  	dhtf.m
@@ -41,16 +40,17 @@ The files include:
 	robInit.m
 	setrob.m
 	train.m
-    datafiles:
+datafiles:
+
 	a1.mat
 	data.mat
--> datagenerator.m, train.m, neuralNetwork.m, mapping.m, remapping.m, and recalled.m
-   are used for constructing and using neural network
--> robInit.m is for initialization of robot
--> dhtf.m, robFK.m, robIK.m are used as kinematics
--> createflower.m is used for generating trajectory
--> drawrob.m, robDraw3D.m, setrob.m are used for drawing
-   robDraw3D.m also contrains PD control and dynamics parts
+Functionality of functions:
+
+	-> datagenerator.m, train.m, neuralNetwork.m, mapping.m, remapping.m, and recalled.m are used for constructing and using neural network
+	-> robInit.m is for initialization of robot
+	-> dhtf.m, robFK.m, robIK.m are used as kinematics
+	-> createflower.m is used for generating trajectory
+	-> drawrob.m, robDraw3D.m, setrob.m are used for drawing robDraw3D.m also contrains PD control and dynamics parts
 
 =========== Instruction ============
 
